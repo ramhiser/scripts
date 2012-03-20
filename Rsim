@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+  echo usage: Rsim filename
+  exit
+fi
+nohup Rscript $1 > ${1}.out 2>&1 &
